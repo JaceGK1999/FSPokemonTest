@@ -2,6 +2,10 @@ import { useState, useEffect } from 'react';
 import { fetchPokemon, fetchTypes } from '../services/FetchPokemon';
 import { fetchFilteredPokemon } from '../services/FetchFilteredPokemon';
 import { SearchByType } from '../components/SearchByType';
+
+import './Main.css';
+import SearchBar from '../components/SearchBar';
+
 export default function Main() {
   const [pokemon, setPokemon] = useState([]);
   const [types, setTypes] = useState([]);
@@ -61,6 +65,8 @@ export default function Main() {
         selectedType={selectedType}
         callback={searchByName}
       />
+      <SearchBar query={search} setQuery={setSearch} callback={searchByName} />
+
       {pokemon.map((item) => (
         <div key={item.id}>
           <p className="poke-card">
