@@ -71,7 +71,12 @@ export default function Main() {
         <div key={item.id}>
           <p className="poke-card">
             {item.pokemon}{' '}
-            <img className="pokemonImg" src={`${item.url_image}`} /> Poké Type:(
+            <img
+              alt="pokemonIMG"
+              className="pokemonImg"
+              src={`${item.url_image}`}
+            />{' '}
+            Poké Type:(
             {item.type_1}, {item.type_2}) Egg Group:(
             {item.egg_group_1}, {item.egg_group_2}) Ability: {item.ability_1}
           </p>
