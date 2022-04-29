@@ -12,10 +12,7 @@ describe('Main', () => {
     await waitFor(
       async () => {
         userEvent.selectOptions(screen.getByRole('combobox'), 'fighting');
-        //   expect(
-        //     screen.getByRole('option', { selectedType: 'fighting' }).selected
-        //   ).toBe(true);
-        screen.debug();
+
         const name = await screen.findByLabelText('blaziken');
         expect(name).toBeInTheDocument();
       },
@@ -23,13 +20,7 @@ describe('Main', () => {
     );
   });
 });
-// screen.getByRole('option', { selectedType: 'fighting' })
-// it('should correctly set default option', () => {
-//   render(<Main />);
-//   expect(screen.getByRole('option', { selectedType: 'all' }).selected).toBe(
-//     true
-//   );
-// });
 
-// const typeSelect = await screen.findByRole('listbox')['fighting'];
-// expect(typeSelect).toBeInTheDocument();
+// const item = 
+
+// describe('first', () => { second })
