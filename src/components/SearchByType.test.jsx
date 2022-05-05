@@ -1,5 +1,4 @@
 import { render, screen, waitFor } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import SearchBar from './SearchBar';
 
 describe('Search by type', () => {
